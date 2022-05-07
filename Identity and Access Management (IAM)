@@ -1,0 +1,46 @@
+It allow you to manage Users and their level access to the aws console. 
+It is global service and doesn't required any region.
+
+* Users
+Console Access -> create password for that user OR make it autogenerate password for that user, the user should access the console link via "IAM users sign-link".
+Programmatic Access (API, CLI, SDK) -> create Access_Key & Secret_Key.
+
+* Groups
+Its collection of user under one set of permission policy.
+
+* Roles 
+Create a role and assign them to aws resource. Roles will work based on expiration duration time.
+EG: Create a role such EC2 service attaching S3 policy, then role will created with EC2 service with S3 policy, now attach a policy to EC2 Instance.
+
+* Policies
+It define one OR more permissions.
+
+Users + Groups
+--------------
+                          Groups                                              Users
+              Name: Group A                                       Name: User 1		
+              Policies: AmazonEC2FullAccess                       Access: Programmatic Access
+                        AmazonS3FullAccess                                Console Access
+                        AmazonRoute53FullAccess
+				  
+              Name: Group B                                       Name: User 2
+              Policies: AmazonRDSFullAccess                       Access: Programmatic Access
+                        AmazonCloudFormationFullAccess
+				  
+              Name: Group C                                       Name: User 3
+              Policies: AdministratorAccess                       Access: Console Access
+		
+-> Group A = User 1
+-> Group B = User 1, User 2
+-> Group C = User 3
+
+Roles + Policies
+----------------
+            Roles                                                       Policies
+        Services: EC2                                       Policies: AmazonS3FullAccess
+                                                                      AmazonEC2FullAccess
+                                                                      AmazonRDSFullAccess
+                                                                      AmazonIAMFullAccess
+                                                                      AmazonRoute53FullAccess
+
+-> Then attach this Roles to an multiple EC2 Instance.

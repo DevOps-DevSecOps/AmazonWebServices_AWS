@@ -1,0 +1,35 @@
+[Security Groups]
+It is an Stateful.
+It is applicable to an EC2 Instance.
+It allows multiple security group attached to EC2 Instance.
+				
+			   Inbound    <---                --->   Outbound  
+			PC --------------- Security Group --------------- Internet
+			
+Inbound                                                                  Inbound
+Type        Protocol     Port     Source                                 Type        Protocol     Port     Source
+SSH (22)       TCP        22	  0.0.0.0                                SSH (22)       TCP        22      0.0.0.0						
+								
+Outbound                                                                 Outbound
+Type        Protocol     Port     Source                                 Type        Protocol     Port     Source
+you do not have any outbound rules                                       ICMP-IPv4     ICMP       ALL      0.0.0.0						
+SSH connection will be established with out SSH Protocol 								             
+
+[Network ACLs (NACL)]
+Each subnet in your VPC must be associate with NACL.
+It operates at subnet level.
+It is Stateless.
+It contain a number list starting with 100 no of rules in a order.
+
+			   Inbound    <---      --->   Outbound
+			PC --------------- NACL --------------- Internet
+
+Inbound                                                                     Inbound
+Rule     Type           Protocol     Port     Source                        Rule     Type          Protocol     Port            Source
+100      SSH (22)          TCP        22      0.0.0.0/0     Allow           100      SSH (22)         TCP        22             0.0.0.0/0      Allow
+*        All Traffic       ALL        ALL     0.0.0.0/0     Deny            *        All Traffic      ALL        ALL            0.0.0.0/0      Deny
+
+Outbound                                                                    Outbound
+Rule     Type           Protocol     Port     Destination                   Rule     Type          Protocol     Port            Destination
+*        All Traffic       ALL        ALL     0.0.0.0/0     Deny            100      CUSTOM TCP       TCP       32768-65535     0.0.0.0/0      Allow
+SSH connection will not be established because no rule for SSH              *        ALL Traffic      ALL        ALL            0.0.0.0/0      Deny

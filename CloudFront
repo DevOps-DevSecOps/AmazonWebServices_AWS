@@ -1,0 +1,36 @@
+Is a global Content Delivery Network (CDN) service from AWS which delivers content from origin location to edge location (AWS CDN Datacenter).
+Where is only use for caching the Data.
+Edge location allow the caching of static objects from the origin location, The origin can be as S3 Bucket, ELB, EC2, Route 53, ...etc which distributes traffic among origin Instances.
+User experience will be increased as the latency will be decreased and also content load time.
+Edge Location - It the location where content will be cached, it separate an across Region/AZ (Edge location is not an AWS Region).
+				It not just READ only - can write to them i.e.. PUT an object onto them. 
+				It utilised by S3 Transfer Acceleration to reduce latency for S3 upload.
+Origin - The origin of all file CDN will distribute. This includes like S3 Bucket, EC2 Instance, ELB, Route 53.
+Distribution - CDN which consist of a collection of Edge Locations that provide Low-Latency and high data transfer speeds.
+			   There will be 2 types.
+			   ● Web - used for Websites.
+			   ● RTMP - used for Media Streaming.
+Objects are cached for the life of the TTL (Time To Live).			   
+
+   Edge_Location (USA - Texas)                                       Edge_Location (UK - London)	
+   User --> Cache_Server ==================== | ==================== User --> Cache_Server  
+                 |                            |                                    |
+            Distribution                      |                               Distribution
+                                              |	 	
+                                              |	 	
+                                              |      
+                                          Web_Server 
+                                           (India)
+                                              | 
+                                              |
+                                              |
+                                              |
+   Edge_Location (Russia - Moscow)            |                      Edge_Location (Australia - Sydney)
+   User --> Cache_Server ==================== | ==================== User --> Cache_Server
+                 |                            |                                    |
+            Distribution                      |                               Distribution		
+                                              |
+                                            Origin 
+
+Its very 1st time Users try to access server will be high latency and data transfer speed will be low and it will cache the data at Edge Location.
+Then later 2nd time Users try to access server will be low latency and high data transfer speed and from the Edge Location get response immediately. 

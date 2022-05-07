@@ -1,0 +1,15 @@
+It is a Monitoring service to Monitor AWS Resources, as well as the Applications that run on AWS.
+Host level Metrics consist of: CPU, Network, Disk, Status Checks.
+It displays the metrics automatically about every AWS service that you choose.
+We can create the dashboard to display the metrics about your custom application and also display the metrics of custom collections.
+
+[Terms]
+* Dashboards
+CloudWatch is used to create dashboards to show what is happening with your AWS environment.
+The dashboard has different 'widget type'.
+* Alarms
+It allows you to set alarms to notify you whenever a particular threshold is hit.
+* Logs
+CloudWatch logs help you to aggregate, monitor, and store logs.
+* Events
+CloudWatch help you to respond to state changes to your AWS resources.

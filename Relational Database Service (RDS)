@@ -1,0 +1,6 @@
+[Connecting RDS MySQL to EC2 Instance]
+mysql -h RDS_SQL_ENDPOINT_DNS --port PORT_NO -u SQL_USERNAME -p SQL_PASSWORD
+mysql -h RDS_SQL_ENDPOINT_DNS --port PORT_NO -u SQL_USERNAME -p 
+mysql -h IP_ADDRESS --port PORT_NO -u SQL_USERNAME -p
+mysql -h DNS_NAME --port PORT_NO -u SQL_USERNAME -p
+mysql -h 127.0.0.1 --port PORT_NO -u SQL_USERNAME -p

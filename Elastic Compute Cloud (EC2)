@@ -1,0 +1,25 @@
+[Launch Types]
+On-Demand - It allows you to pay a fixed rate by the hour with no commitment. 
+Spot Requests - Can get a discount of up to 90% compared to On-Demand.
+                Instances that can lose at any point of time if max price is less than the current spot price.
+                If the current spot price > max price you can choose to stop or terminate the instance with a 2 minutes grace period.
+Reserved Instances - Up to 75% discount compared to On-Demand.
+                     It reserve a specific Instance Type.
+                     Reservation period can be 1 OR 3 years. 
+Dedicated Hosts - Physical dedicated EC2 server for your use.
+                  
+[Instance Types]
+General Purpose - instances provide a balance of compute, memory and networking resources, and can be used for a variety of diverse workloads.
+Compute Optimized - instances are ideal for compute bound applications that benefit from high performance processors.
+Memory Optimized - instances are designed to deliver fast performance for workloads that process large data sets in memory.
+Accelerated Computing - instances use hardware accelerators, or co-processors, to perform functions, graphics processing, more efficiently than is possible in software running on CPUs.
+Storage Optimized - instances are designed for workloads that require high, sequential read and write access to very large data sets on local storage.
+
+[Tenancy]
+Shared - The multiple EC2 instances from different customers may reside on the same piece of physical hardware.
+Dedicated Instance - It's physically isolated host hardware dedicated to a single customer account.
+                     Dedicated Instances are Amazon EC2 instances that run in a VPC on hardware that dedicated to a single customer. 
+                     Dedicated Instances are physically isolated at the host hardware level from instances that belong to other AWS accounts.
+                     Dedicated Instances may share hardware with other instances from the same AWS account that are not Dedicated instances.
+Dedicated Host - The host hardware physically dedicated to a single customer account.
+                 An Amazon EC2 Dedicated Host is a physical server with EC2 instance capacity fully dedicated to your use. 

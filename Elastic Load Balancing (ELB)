@@ -1,0 +1,15 @@
+It allows as to distribute the incoming traffic to multiple ec2 instance similar to what a traditional load balancer does.
+It is capable of handling rapid change in the network traffic pattern.
+It will work on Round-Robin.
+Use to load balance across the different Available Zone (AZ) with in same region, but not to different VPC (or) Regions.
+Types
+-> Application Load Balancer
+-> Network Load Balancer
+-> Gateway Load Balancer
+-> Classic Load Balancer
+
+USER's ---> EC2                          # All the incoming traffic into one server.
+   
+                    ----> EC2_1
+USER's ---> ELB --->|                    # The incoming traffic will be redirect each EC2 with in a ELB. 
+                    ----> EC2_2

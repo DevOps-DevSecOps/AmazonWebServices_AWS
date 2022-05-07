@@ -1,0 +1,23 @@
+[TCP (Transmission Control Protocol)]
+It is a network communication protocol designed to send data packet over the internet, which is a set of networking protocols that allows two or more computers to communicate.
+
+[UDP (User Datagram Protocol)]
+It is an alternative communication protocol to TCP used primarily for an establishing low-latency and loss-tolerating connection between applications on the internet.
+
+PROTOCOL            SERVICE            PORT
+TCP                 FTP data           20
+TCP                 FTP control        21
+TCP/UDP             SSH                22
+TCP                 Telnet             23
+TCP                 SMTP               25
+TCP/UDP             DNS                53
+UDP                 DHCP server        67
+UDP                 DHCP client        68
+UDP                 TFTP               69
+TCP                 HTTP               80
+TCP                 POP3               110
+UDP                 NTP                123
+TCP                 IMAP               143
+TCP/UDP             SNMP               161
+TCP/UDP             HTTPS              443
+TCP/UDP             RDP                3389

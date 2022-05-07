@@ -1,0 +1,6 @@
+It is low cost, secure, durable storage service that can be used to store long term data for backup or archival.
+Glacier data repository is known as Vault.
+Any data that is upload to a glacier vault is known as archive retrieving data from glacier is slow and time consuming and typically take 3-4 hrs.
+Once the archive is deleted from vault is took 24 hrs to refresh the inventory updated and check the no of archive it show. 
+Archive data can upload via AWS CLI because in GUI doesn't support upload data and display data, use GUI Thrid-Party tools like FastGlacier, CloudBerry for uploading archives.
+Each archive data while uploaded then assigned a unique archive id of the time creation through an aws cli.

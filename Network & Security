@@ -1,0 +1,19 @@
+[Placement Groups]
+● Is a group of EC2 instances to meet the needs of your workload.
+Cluster - Instances into a low-latency group in a single Availability Zone. 
+          All nodes within the placement group can talk to all other nodes within the placement group at the full line rate of 10 Gbps.
+          Same AZ -> Same Rack = no of EC2 Instances run
+Spread - Limited to 7 instances per AZ.
+         Running of EC2 Instance will be on different Availability Zone within a same Region.    
+         Each EC2 Instance would be placed on a single Rack.
+         AZ1 -> Rack1 = EC2, Rack2 = EC2, Rack3 = EC2
+         AZ2 -> Rack1 = EC2, Rack2 = EC2
+         AZ3 -> Rack1 = EC2
+Partition - Instances across many different partitions (which rely on different sets of racks) within a AZ. 
+            Scales to 100s of EC2 instances per group.
+            Create up to 7 partitions per AZ within a same Region.
+            No partitions within a placement group share the same Racks.
+            In AZ can have 1 to 7 partitions and each partition on different Rack.
+            Same AZ -> Rack1 - Partition1 = no of EC2 Instances run
+                       Rack2 - Partition2 = no of EC2 Instances run
+                       Rack3 - Partition3 = no of EC2 Instances run

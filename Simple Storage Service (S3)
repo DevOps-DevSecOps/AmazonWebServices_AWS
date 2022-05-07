@@ -1,0 +1,54 @@
+While creating a bucket name should be unique gobally.
+EG:- BUCKET_NAME = MyBucket			# Again u can't create bucket with the same name across the global.
+In Bucket can upload object like Photos, Videos, Documents, Files, PDF, ...etc.
+Create 100 Buckets per account.
+The objects size support from a minimum of 0 bytes to a maximum of 5 TB.
+Largest single file objects upload is 5 GB.
+Multi part upload for objects from 5 MB up to 5 TB. 
+
+Storage Classes
+---------------
+● Standard
+It is the default storage class if none of the storage class is specified during upload.
+Frequently accessed data because it provides low latency and high availability.
+Offer high durability to performance for object stored.
+It is the most expensive storage class among all others.
+It store data in a minimum of 3 Availability Zones (AZ).
+● Intelligent-Tiering
+It moves objects that have not been accessed for 30 consecutive days to the infrequent access tier.
+If the object is accessed then it is automatically moved back to the frequent access tier.
+It for storing long-lived data where the access patterns are unknown.
+It store data in a minimum of 3 Availability Zones (AZ).
+● Standard-IA (Infrequent Access)
+Infrequently accessed data.
+Long-lived and less frequently accessed data.
+The S3 Standard-IA is ideal for backups, long-term storage, and as a data store for disaster recovery.
+It store data in a minimum of 3 Availability Zones (AZ).
+Min storage duration is 30 days.
+● One Zone-IA (Infrequent Access)
+Since the other S3 storage class store data in a minimum of 3 Availability Zones (AZ), the stores data in a single AZ and costs 20% less than S3 Standard-IA.
+Min storage duration is 30 days.
+● Glacier
+S3 Glacier is a low-cost storage class for data archiving where data access is infrequent. (OR) It is much cheaper than S3.
+May take several hours for the objects to get restored.
+It provides a configurable retrieval time for the data from minutes to hours. (OR) Archive data with retrival times range from minutes to hours.
+It store data in a minimum of 3 Availability Zones (AZ).
+Min storage duration is 90 days.
+● Glacier Deep Archive
+The data that may be accessed only once or twice in a year.
+Long-term data archiving with retrieval times within 12 hours.
+It can also be used for backup and disaster recovery.
+Retrieval costs can be reduced by using bulk retrieval.
+It store data in a minimum of 3 Availability Zones (AZ).
+Min storage duration is 180 days.
+● Reduced Redundancy
+Frequently accessed, non-critical data.
+It store data in a minimum of 3 Availability Zones (AZ).
+
+[Versioning]
+Keep multiple version of an Object in the same Object.
+
+[Cross-Origin Resource Sharing (CORS)]
+If request data from another S3 bucket need to enable CORS.
+CORS allows to limit the number of websites that can request files in S3.
+CORS configuration is a JSON file.

@@ -1,0 +1,45 @@
+[Volumes]
+Creating a Volume it should be with in Availability Zone (AZ).
+We can build the Volume to Snapshot, Snapshot Lifecycle Manager.
+Types :
+● Solid State Drives (SSD)
+-> General Purpose SSD — Provides a balance of price and performance. We recommend these volumes for most workloads.
+Volume type = gp2 & gp3
+Use cases = Low-latency interactive apps, Development and Test environments
+Volume size = 1 GiB - 16 TiB
+Amazon EBS Multi-attach = Not supported
+Boot volume = Supported
+-> Provisioned IOPS SSD — Provides high performance for mission-critical, low-latency, or high-throughput workloads.
+Volume type = io1 & io2 
+Use cases = Highest-performance SSD volume, high-throughput applications, used for large databases
+Volume size = 4 GiB - 16 TiB
+Amazon EBS Multi-attach = Supported
+Boot volume = Supported
+● Hard Disk Drives (HDD)
+-> Throughput Optimized HDD — A low-cost HDD designed for frequently accessed, throughput-intensive workloads.
+Volume type = st1
+Use cases = Big data, Data warehouses, Log processing
+Volume size = 125 GiB - 16 TiB
+Amazon EBS Multi-attach = Not supported
+Boot volume = Not supported
+-> Cold HDD — The lowest-cost HDD design for less frequently accessed workloads.
+Volume type = sc1
+Use cases = infrequently accessed data, Scenarios where the lowest storage cost is important
+Volume size = 125 GiB - 16 TiB
+Amazon EBS Multi-attach = Not supported
+Boot volume = Not supported
+● Magnetic
+Volume type = standard
+Use cases = Workloads where data is infrequently accessed
+Volume size = 1 GiB - 1 TiB
+Boot volume = Supported
+
+[Snapshots]
+We can create Snapshot from Volume, Instance.
+We can copy the Snapshot across the region.
+We can build the Snapshot to AMI.
+We can build the Snapshot to Volume with in Availability Zone (AZ).
+
+[Lifecycle Manager]
+We can create Snapshot from Volume, Instance.
+We can copy the Snapshot across the region using Cross-Region copy.

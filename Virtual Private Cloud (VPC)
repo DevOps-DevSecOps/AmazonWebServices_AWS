@@ -1,0 +1,84 @@
+[Virtual Private Cloud (VPCs)]
+Default limit for per-region is 5 VPC.
+
+[Subnets]
+Default limit for per-region is 200 Subnets per VPC.
+For each Subnet 5 IPv4 addresses CIDR will be reserved per VPC.
+AWS reserves 5 IP address in each subnet CIDR block - Network Address, AWS VPC router, DNS Server, Reserved by AWS for future, Broadcast Address.
+Public Subnet
+-------------
+If a subnet's traffic is routed to an internet gateway, the subnet is known as a Public Subnet.
+A public subnet is a subnet that is associated with a route table that has a route to an Internet gateway. This connects the VPC to the Internet and to other AWS services.
+A public subnet has an outbound route that sends all traffic through what AWS calls an Internet Gateway (IGW).
+A public subnet has a route table that says, send all outbound traffic (anything to the CIDR block 0.0.0.0/0) via this Internet Gateway.
+Private Subnet
+--------------
+If a subnet doesn't have a route to the Internet Gateway, the subnet is known as a Private Subnet.
+A Private Subnet is a subnet that is associated with a route table that doesn’t have a route to an Internet Gateway. Instances in the Private Subnet are backend servers they don’t accept the traffic from the internet.
+A Private Subnet needs to talk to the internet via NAT (Network Address Translation).
+A private subnet either does not allow outbound traffic to the internet or has a route that says, send all outbound traffic via this NAT Gateways OR NAT Instances.
+Backend Servers in the Private Subnet does not accept traffic from the internet. EG:- Resources like SQL Database needs internet connection for updating records but it should not accept the request from the internet.
+
+[Route Tables]
+If specifices how packets are forwarded between the subnets within your VPC, the internet, and your VPN connection.
+
+[Internet Gateways]
+It is a virtual router that connects a VPC to the internet.
+
+[Peering]
+A peering connection enables you to route traffic via private IP addresses between two peered VPCs.
+
+[Security Groups]
+It will acts as a virtual firewall for your instance to control inbound and outbound traffic.
+Security Groups - stateful, can work EC2 Instance level, permit rules only.
+
+[Network ACLs (NACL)]
+NACL is stands for "Network Access Control List".
+It is an optional layer of security that acts as a firewall for controlling traffic in and out of a subnet.
+Inbound rules control the incoming traffic that's allowed to reach the VPC & Outbound rules control the outgoing traffic that's allowed to leave the VPC.
+NACL - stateless, can work Subnet level, permit & deny rules only.
+The Rule number are evaluated starting with the lowest numbered rule for both Inbound rules and Outbound rules.
+The Rule number start with 100 for Allow/Deny permissions in Inbound rules and Outbound rules.
+The Rule number * is a default of Network ACL that Deny all the traffic for Inbound rules and Outbound rules, Can't change it. 
+Ephemeral Ports
+---------------
+An ephemeral port is a temporary communication hub used for Internet Protocol (IP) communications.
+An ephemeral ports are alternative/random ports used in Incoming and Outgoing traffic for any Protocol.  
+An ephemeral port range is 32768 to 65535 used for Inbound rules and Outbound rules. 
+An ephemeral port is applicable to Inbound rules and Outbound rules in NACL.
+● Linux kernels (including the Amazon Linux kernel) use ports 32768-61000.
+● Elastic Load Balancing use ports 1024-65535.
+● Windows operating systems through Windows Server 2003 use ports 1025-5000.
+● Windows Server 2008 and later versions use ports 49152-65535.
+● NAT Gateway uses ports 1024-65535.
+● AWS Lambda functions use ports 1024-65535.
+
+[Network Address Translation (NAT) Gateways]
+Is associate with a Public Subnet {allocate 1 ip address in Public Subnet} and Elastic IP. 
+No need to have a Security Group.
+No need to disable Source/Destination check.
+
+[Network Address Translation (NAT) Instances]
+Its from Community AMI.
+Then disable Source/Destination check for NAT Instance.	
+Before disable Source/Destination check - the traffic allow to in but traffic doesn't go out, After disable Source/Destination check - then any traffic it sends or receives.    
+Must be in Public Subnet.
+There must be route out of Private Subnet and point to NAT Instance.
+Need to have a Security Group for NAT Instance.
+The amount of traffic that NAT Instance supports depends on the instance size.
+
+Compare NAT Gateways and NAT Instances
+--------------------------------------
+[NAT Gateways]
+Managed by AWS.
+Bandwidth upto 45 Gbps.
+The Elastic IP address to associate with a public NAT Gateway at creation. The Elastic IP address can't be detached. 
+Cann't associate with a Security Group.
+Bastion servers are not supported.
+
+[NAT Instances]
+Managed by us.
+Bandwidth of the EC2 instance type. 
+The Elastic IP address or a public IP address with a NAT instance. You can change the public IP address at any time by associating a new Elastic IP address with the instance.
+Can associate with a Security Group.
+Bastion servers are supported.

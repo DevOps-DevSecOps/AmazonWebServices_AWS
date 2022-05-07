@@ -1,0 +1,6 @@
+[Credentials]
+The credentials file is located at ~/.aws/ on Linux oR macOS, and at C:\Users\USERNAME\.aws\ on Windows.
+In .aws there will be 2 files.
+* config - It maintain like region, output. 
+* credentials - It maintain like aws_access_key_id, aws_secret_access_key.
+We can configure multiple Access Key & Secret Key using an profile.
