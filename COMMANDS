@@ -4,7 +4,7 @@ aws --version
 [Command Line Interface (CLI)]
 aws configure list
 aws configure                                                                           # Default Profile
-aws configure --profile PROFILE_NAME													# Custom Profile
+aws configure --profile PROFILE_NAME                                                    # Custom Profile
 
 [EC2]
 aws ec2 describe-instances
