@@ -15,7 +15,7 @@ aws ec2 describe-availability-zones --region REGION_ID                          
 aws s3 mb s3://BUCKET_NAME
 aws s3 mb s3://BUCKET_NAME --region REGION_ID                                           # REGION_ID = us-west-1
 aws s3 ls
-aws s3 ls BUCKET_NAME
+aws s3 ls s3://BUCKET_NAME
 aws s3 cp s3://BUCKET_NAME/FILE_NAME .
 aws s3 sync s3://BUCKET_NAME/ FOLDER_NAME/ --region REGION_ID                           # REGION_ID = us-east-1 
 
