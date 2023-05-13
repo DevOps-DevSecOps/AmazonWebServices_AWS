@@ -9,6 +9,7 @@ aws configure get region
 
 [EC2]
 aws ec2 describe-instances
+aws ec2 describe-instances --region=REGION_ID
 aws ec2 describe-instances --profile PROFILE_NAME
 aws ec2 describe-availability-zones --region REGION_ID                                  # REGION_ID = us-west-2
 
