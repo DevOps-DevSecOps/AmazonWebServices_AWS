@@ -10,9 +10,9 @@ It similar to VCS/SCM (git).
 Alternative to other build tools like as Jenkins.
 Code from git SCM, CodeCommit, S3.
 Build instruction can be defined in code by using a buildspec.yml file.
-Output logs to AWS S3 & AWS CloudWatch logs.
+Output logs to S3 & CloudWatch logs.
 SNS notifications.
-Artifact upload to AWS S3.
+Artifact upload to S3.
 The buildspec.yml file must be at the root of the code.
 The buildspec.yml is a collection of build commands and related setting in the yaml format.
 The buildspec.yml need to checked in with the root folder of the application code.
@@ -27,4 +27,4 @@ Every code change  push to code repository automatically enter the workflow and 
 [CodePipeline]
 
 [Cloud9]
-It is a cloud based integrated development environment (IDE) such as like terminal OR cli.
+It is a cloud based integrated development environment (IDE) such as like CLI/Terminal.
