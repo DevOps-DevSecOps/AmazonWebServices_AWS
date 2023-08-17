@@ -16,10 +16,13 @@ aws ec2 describe-availability-zones --region REGION_ID                          
 [Simple Storage Service (S3)]
 aws s3 mb s3://BUCKET_NAME
 aws s3 mb s3://BUCKET_NAME --region REGION_ID                                           # REGION_ID = us-west-1
-aws s3 ls
-aws s3 ls s3://BUCKET_NAME
+aws s3 ls                                                                               # list all the Buckets
+aws s3 ls s3://BUCKET_NAME                                                              # list all from the Bucket
 aws s3 cp s3://BUCKET_NAME/FILE_NAME .
+aws s3 cp FILE_NAME:original s3://BUCKET_NAME/FILE_NAME:rename
 aws s3 sync s3://BUCKET_NAME/ FOLDER_NAME/ --region REGION_ID                           # REGION_ID = us-east-1 
+aws s3 rm s3://BUCKET_NAME/FILE_NAME                                                    # delete a file from the Bucket
+aws s3 rb s3://BUCKET_NAME                                                              # delete Bucket
 
 [Identity and Access Management (IAM)]
 aws iam list-users
