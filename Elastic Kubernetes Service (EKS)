@@ -1,5 +1,4 @@
 
-
 [Commands]
 ●
 $ eksctl create cluster --name CLUSTER_NAME --region REGION_CODE --node-type INSTANCE_TYPES
@@ -10,3 +9,5 @@ $ eksctl delete cluster --name CLUSTER_NAME --region REGION_CODE
   eksctl delete cluster --name eks --region us-east-1
 $ eksctl delete cluster --name=CLUSTER_NAME --region=REGION_CODE
   eksctl delete cluster --name=eks --region=us-east-1
+$ eksctl delete cluster CLUSTER_NAME --region REGION_CODE
+  eksctl delete cluster eks --region us-east-1
