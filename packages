@@ -1,0 +1,12 @@
+So the package has been installed.
+$ which amazon-linux-extras
+
+So the package has not been installed.
+$ sudo yum install -y amazon-linux-extras
+
+list the available topics
+$ amazon-linux-extras
+
+$ sudo amazon-linux-extras install PACKAGE_NAME -y
+  sudo amazon-linux-extras install ansible2 -y 
+  
