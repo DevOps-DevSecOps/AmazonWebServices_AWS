@@ -9,7 +9,7 @@ Customers (www.website.com) ---> DNS resolver ---> | ---> TLD Server (Name serve
                                                               CloudFront ---> Elastic Load Balancing (ELB) ---> Web Server (www.website.com - 192.0.2.44) ---> Customers (Web Page of www.website.com)
 
 Route 53 is a service of DNS (Domain Name System). It work on UDP port no 53.
-Hosted Zone is a collection of resource record set for a specific domain.
+Route 53 Hosted Zone is a collection of records for a specific domain.
 * Public Hosted Zone - define domain & sub-domain routing for internet traffic.
                        AWS automatically create an record: NAME SERVER (NS) & START OF AUTHORITY (SOA).  
 * Private Hosted Zone - define domain & sub-domain routing for traffic with in one or more AWS VPC.
