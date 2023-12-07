@@ -1,3 +1,9 @@
+[Top-Level Domain (TLD)]
+.com
+.org
+.net
+.edu
+
 Domain Name System (DNS) - The Internet's DNS system works much like a phone book by managing the mapping between names and numbers.
 
                                                    | ---> Root Server (DNS root name server)
