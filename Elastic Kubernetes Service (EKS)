@@ -7,6 +7,8 @@ $ eksctl create cluster --name CLUSTER_NAME --region REGION_CODE --node-type INS
   eksctl create cluster --name eks --region us-east-1 --node-type t2.small
 $ eksctl create cluster --name CLUSTER_NAME --version VERSION_NO --region REGION_CODE --nodegroup-name NODEGROUP_NAME --node-type INSTANCE_TYPES --nodes NO
   eksctl create cluster --name eks --version 1.27 --region us-east-1 --nodegroup-name eksnodes --node-type m5.large --nodes 2
+$ eksctl create cluster --name CLUSTER_NAME --version VERSION_NO --region REGION_CODE --nodegroup-name NODEGROUP_NAME --node-type INSTANCE_TYPES --nodes NO --nodes-min NO --nodes-max NO --ssh-access --ssh-public-key FILE_NAME
+  eksctl create cluster --name eks --version 1.27 --region us-east-1 --nodegroup-name eksnodes --node-type m5.large --nodes 2 --nodes-min 2 --nodes-max 4 --ssh-access --ssh-public-key FILE_NAME.pem
 ●
 $ eksctl delete cluster --name CLUSTER_NAME
 $ eksctl delete cluster --name CLUSTER_NAME --region REGION_CODE
