@@ -22,9 +22,11 @@ $ eksctl create nodegroup --cluster CLUSTER_NAME --region REGION_CODE --name NOD
   eksctl create nodegroup --cluster eks --region us-east-1 --name eksnodes --node-type m5.large --nodes 2 --nodes-min 2 --nodes-max 4 --node-volume-size 40 --ssh-access --ssh-public-key FILE_NAME.pem
 $ eksctl create nodegroup --cluster=CLUSTER_NAME --region=REGION_CODE --name=NODEGROUP_NAME --node-type=INSTANCE_TYPES --nodes=NO --nodes-min=NO --nodes-max=NO --node-volume-size=NO --ssh-access --ssh-public-key=FILE_NAME.pub
   eksctl create nodegroup --cluster=eks --region=us-east-1 --name=eksnodes --node-type=m5.large --nodes=2 --nodes-min=2 --nodes-max=4 --node-volume-size=40 --ssh-access --ssh-public-key=FILE_NAME.pub
-●
+● It enable kubectl to communicate with cluster by adding a new context to the kubectl config file.
 $ aws eks update-kubeconfig --name CLUSTER_NAME --region REGION_CODE
   aws eks update-kubeconfig --name eks --region us-east-1
+Added new context arn:aws:eks:REGION_CODE:AWS_ACCOUNT_ID:cluster/CLUSTER_NAME to /home/USERNAME/.kube/config
+Added new context arn:aws:eks:us-east-1:xxxxxxxxxxxxxx:cluster/eks to /home/USERNAME/.kube/config
 ●
 $ eksctl get cluster --region REGION_CODE
   eksctl get cluster --region us-east-1
