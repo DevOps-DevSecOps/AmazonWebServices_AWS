@@ -15,10 +15,21 @@ $ eksctl create cluster --name CLUSTER_NAME --version VERSION_NO --region REGION
 $ eksctl create cluster --name=CLUSTER_NAME --version=VERSION_NO --region=REGION_CODE --tags NAME=VALUE --nodes=NO --nodes-min=NO --nodes-max=NO --node-volume-size=NO --node-volume-type=VOLUME_TYPES --ssh-access --ssh-public-key=FILE_NAME.pub
   eksctl create cluster --name=eks --version=1.27 --region=us-west-1 --tags environment=staging --nodes=2 --nodes-min=3 --nodes-max=5 --node-volume-size=50 --node-volume-type=io1 --ssh-access --ssh-public-key=FILE_NAME.pub
 ●
+$ eksctl utils associate-iam-oidc-provider --cluster CLUSTER_NAME --region REGION_CODE --approve
+  eksctl utils associate-iam-oidc-provider --cluster eks --region us-east-1 --approve
+●
+$ eksctl create nodegroup --cluster CLUSTER_NAME --region REGION_CODE --name NODEGROUP_NAME --node-type INSTANCE_TYPES --nodes NO --nodes-min NO --nodes-max NO --node-volume-size NO --ssh-access --ssh-public-key FILE_NAME.pem
+  eksctl create nodegroup --cluster eks --region us-east-1 --name eksnodes --node-type m5.large --nodes 2 --nodes-min 2 --nodes-max 4 --node-volume-size 40 --ssh-access --ssh-public-key FILE_NAME.pem
+$ eksctl create nodegroup --cluster=CLUSTER_NAME --region=REGION_CODE --name=NODEGROUP_NAME --node-type=INSTANCE_TYPES --nodes=NO --nodes-min=NO --nodes-max=NO --node-volume-size=NO --ssh-access --ssh-public-key=FILE_NAME.pub
+  eksctl create nodegroup --cluster=eks --region=us-east-1 --name=eksnodes --node-type=m5.large --nodes=2 --nodes-min=2 --nodes-max=4 --node-volume-size=40 --ssh-access --ssh-public-key=FILE_NAME.pub
+●
 $ eksctl get cluster --region REGION_CODE
   eksctl get cluster --region us-east-1
 ●
-
+$ eksctl delete nodegroup --cluster CLUSTER_NAME --name NODEGROUP_NAME --region REGION_CODE
+  eksctl delete nodegroup --cluster eks --name eksnodes --region us-east-1
+$ eksctl delete nodegroup --cluster=CLUSTER_NAME --name=NODEGROUP_NAME --region=REGION_CODE
+  eksctl delete nodegroup --cluster=eks --name=eksnodes --region=us-east-1
 ●
 $ eksctl delete cluster --name CLUSTER_NAME
 $ eksctl delete cluster --name CLUSTER_NAME --region REGION_CODE
