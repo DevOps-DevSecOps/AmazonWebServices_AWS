@@ -1,3 +1,9 @@
+[pre-requisite]
+● AWS CLI
+Now configure the 'AWS Access Key ID' and 'AWS Secret access key' using the command "aws configure".
+● eksctl
+● kubectl
+
 [Commands]
 ●
 $ eksctl version
@@ -8,6 +14,7 @@ $ eksctl create cluster --name CLUSTER_NAME --region REGION_CODE --node-type INS
 $ eksctl create cluster --name=CLUSTER_NAME --region=REGION_CODE --zones=AVAILABILITY_ZONE_1,AVAILABILITY_ZONE_2 --without-nodegroup
 $ eksctl create cluster --name CLUSTER_NAME --version VERSION_NO --region REGION_CODE --nodegroup-name NODEGROUP_NAME --node-type INSTANCE_TYPES --nodes NO
   eksctl create cluster --name eks --version 1.27 --region us-east-1 --nodegroup-name eksnodes --node-type m5.large --nodes 2
+$ eksctl create cluster --name CLUSTER_NAME --region REGION_CODE --nodegroup-name NODEGROUP_NAME --node-type INSTANCE_TYPES
 $ eksctl create cluster --name CLUSTER_NAME --version VERSION_NO --region REGION_CODE --nodegroup-name NODEGROUP_NAME --node-type INSTANCE_TYPES --nodes NO --zones AVAILABILITY_ZONE_1,AVAILABILITY_ZONE_2
   eksctl create cluster --name eks --version 1.27 --region us-west-2 --nodegroup-name eksnodes --node-type m5.large --nodes 2 --zones us-west-2a,us-west-2b,us-west-2c
 $ eksctl create cluster --name CLUSTER_NAME --version VERSION_NO --region REGION_CODE --nodegroup-name NODEGROUP_NAME --node-type INSTANCE_TYPES --nodes NO --nodes-min NO --nodes-max NO --ssh-access --ssh-public-key FILE_NAME.pem
