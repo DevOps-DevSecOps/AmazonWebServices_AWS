@@ -11,6 +11,7 @@ $ eksctl version
 $ eksctl create cluster --name CLUSTER_NAME --region REGION_CODE --fargate
 $ eksctl create cluster --name CLUSTER_NAME --region REGION_CODE --node-type INSTANCE_TYPES
   eksctl create cluster --name eks --region us-east-1 --node-type t2.small
+$ eksctl create cluster --name CLUSTER_NAME --region REGION_CODE --node-type INSTANCE_TYPES --nodes NO
 $ eksctl create cluster --name=CLUSTER_NAME --region=REGION_CODE --zones=AVAILABILITY_ZONE_1,AVAILABILITY_ZONE_2 --without-nodegroup
 $ eksctl create cluster --name CLUSTER_NAME --version VERSION_NO --region REGION_CODE --nodegroup-name NODEGROUP_NAME --node-type INSTANCE_TYPES --nodes NO
   eksctl create cluster --name eks --version 1.27 --region us-east-1 --nodegroup-name eksnodes --node-type m5.large --nodes 2
