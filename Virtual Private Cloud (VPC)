@@ -28,6 +28,12 @@ It is a virtual router that connects a VPC to the internet.
 [Peering]
 A peering connection enables you to route traffic via private IP addresses between two peered VPCs.
 
+[Elastic IP]
+By default, all AWS accounts are limited to 5 Elastic IP addresses per Region.
+When EC2 Instance stop & start then automatically change the Public IP Address.
+If we have a fixed Public IP Address for EC2 Instance need to use Elastic IP.
+Elastic IP address assigned to a running EC2 instance for it will be free are not charged and Elastic IP address not assigned to a running or stopped EC2 instance for it will be charged pricing.
+
 [Security Groups]
 It will acts as a virtual firewall for your instance to control inbound and outbound traffic.
 Security Groups - stateful, can work EC2 Instance level, permit rules only.
