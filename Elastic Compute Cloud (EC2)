@@ -1,3 +1,8 @@
+[EC2 (Elastic Compute Cloud)]
+● Instances
+The initially limited to launching 20 EC2 Instances per VPC.
+
+
 [Launch Types]
 On-Demand - It allows you to pay a fixed rate by the hour with no commitment. 
 Spot Requests - Can get a discount of up to 90% compared to On-Demand.
@@ -8,8 +13,7 @@ Reserved Instances - Up to 75% discount compared to On-Demand.
                      Reservation period can be 1 OR 3 years. 
 Dedicated Hosts - Physical dedicated EC2 server for your use.
 
-[Instances]
-The initially limited to launching 20 EC2 Instances per VPC.
+
 
 [Instance Types]
 General Purpose - instances provide a balance of compute, memory and networking resources, and can be used for a variety of diverse workloads.
