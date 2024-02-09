@@ -2,6 +2,7 @@
 It is an Stateful.
 It is applicable to an EC2 Instance.
 It allows multiple security group attached to EC2 Instance.
+It can be attached to multiple EC2 Instances.
 				
 			   Inbound    <---                --->   Outbound  
 			PC --------------- Security Group --------------- Internet
