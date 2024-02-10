@@ -33,3 +33,7 @@ Every region have different AMI ID.
 It coustmize entire like OS, Softwares, Data make it as Image. 
 By using this Image can launch a Instance, restore the softwares and backup of the Data will retrived.
 We can copy the AMI across the region.
+Virtualization Types :-
+--------------------
+Paravirtual (PV)
+Hardware Virtual Machine (HVM)
