@@ -17,7 +17,6 @@ Dedicated Instance - It's physically isolated host hardware dedicated to a singl
                      Dedicated Instances may share hardware with other instances from the same AWS account that are not Dedicated instances.
 Dedicated Host - The host hardware physically dedicated to a single customer account.
                  An Amazon EC2 Dedicated Host is a physical server with EC2 instance capacity fully dedicated to your use. 
-
 ● Launch Types
 On-Demand - It allows you to pay a fixed rate by the hour with no commitment. 
 Spot Requests - Can get a discount of up to 90% compared to On-Demand.
