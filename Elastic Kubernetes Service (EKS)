@@ -1,6 +1,7 @@
 [pre-requisite]
 ● AWS CLI
 Now configure the 'AWS Access Key ID' and 'AWS Secret access key' using the command "aws configure".
+● AWS IAM Roles
 ● eksctl
 ● kubectl
 
