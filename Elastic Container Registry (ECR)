@@ -1,0 +1,8 @@
+[pre-requisite]
+● AWS IAM Roles
+create an IAM role with "AmazonEC2ContainerRegistryFullAccess" policy, then assign the role to EC2 instance.
+
+[Commands]
+●
+$ aws ecr create-repository --repository-name REPOSITORY_NAME --region REGION_CODE
+  aws ecr create-repository --repository-name myawesome-repo --region us-east-2
