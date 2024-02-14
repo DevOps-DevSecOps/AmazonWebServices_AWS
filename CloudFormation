@@ -6,6 +6,8 @@ The template can be store in S3 by enabling an S3 Versioning.
 When template upload, automatically the template will store in S3, incase the template is in S3 specify the S3 URL.
 The template is called as stack in CloudFormation.
 
+● Nested Stack
+
 [Stack]
 By using a single AWS CloudFormation template deploy to an target AWS account within an single AWS Region.
 
