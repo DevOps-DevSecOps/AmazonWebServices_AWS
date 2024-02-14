@@ -7,11 +7,47 @@ aws configure --profile PROFILE_NAME                                            
 aws configure list
 aws configure get region
 
-[EC2]
+[Elastic Compute Cloud (EC2)]
 aws ec2 describe-instances
 aws ec2 describe-instances --region=REGION_ID
 aws ec2 describe-instances --profile PROFILE_NAME
 aws ec2 describe-availability-zones --region REGION_ID                                  # REGION_ID = us-west-2
+● Retrieve the Data
+$ curl http://169.254.169.254/
+1.0
+2007-01-19
+2007-03-01
+...
+...
+...
+2022-07-09
+2022-09-24
+latest
+$ curl http://169.254.169.254/latest/
+dynamic
+meta-data
+user-data
+$ curl http://169.254.169.254/latest/meta-data/                                                     # meta-data = information about EC2 instance
+ami-id 
+block-device-mapping/
+iam/
+instance-action
+instance-id
+instance-type
+local-hostname
+local-ipv4
+metrics/
+network/
+placement/
+profile
+public-hostname
+public-ipv4
+security-groups
+services/
+$ curl http://169.254.169.254/latest/meta-data/iam
+$ curl http://169.254.169.254/latest/meta-data/network/
+$ curl http://169.254.169.254/latest/meta-data/instance-type
+$ curl http://169.254.169.254/latest/user-data                                                      # user-data = information about shell script of EC2 instance
 
 [Simple Storage Service (S3)]
 aws s3 mb s3://BUCKET_NAME
