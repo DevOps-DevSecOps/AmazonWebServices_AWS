@@ -1,1 +1,13 @@
+It is an Infrastructure as Code (IaC).
+It support both type of languages JSON or YAML file is called as template.
+A template is a JSON or YAML file that contains configuration information about the AWS resources you want to include in the stack.
+Every stack is based on a template.
+The template can be store in S3 by enabling an S3 Versioning.
+When template upload, automatically the template will store in S3, incase the template is in S3 specify the S3 URL.
+The template is called as stack in CloudFormation.
 
+[Stack]
+By using a single AWS CloudFormation template deploy to an target AWS account within an single AWS Region.
+
+[StackSets]
+By using a single AWS CloudFormation template deploy to an multiple AWS accounts across multiple AWS Regions.
