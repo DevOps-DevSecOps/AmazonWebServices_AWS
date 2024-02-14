@@ -13,3 +13,7 @@ By using a single AWS CloudFormation template deploy to an target AWS account wi
 
 [StackSets]
 By using a single AWS CloudFormation template deploy to an multiple AWS accounts across multiple AWS Regions.
+
+● Designer
+It is a graphic tool (GUI) for creating, viewing, and modifying AWS CloudFormation templates.
+It is graphically represents the templates to help see the resources in the template and how they're connected.
