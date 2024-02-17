@@ -1,12 +1,26 @@
 It allows as to distribute the incoming traffic to multiple ec2 instance similar to what a traditional load balancer does.
+It allows as to distribute the incoming traffic to multiple ec2 instance to ensure no single ec2 instance is overwhelmed.
+Scalability: Handle increased traffic during peaks time.
+Fault Tolerance: Redirect traffic is an instance or availability zone fails.
+High Availability: Ensure that applications are available or responsive.
+Cost-Efficiency: resource utilization, reducing cost.
 It is capable of handling rapid change in the network traffic pattern.
 It will work on Round-Robin.
+Auto Scaling: Dynamically adjust the number of instances behind a load balancer.
+Health Checks: Monitors the health of instances and ensures traffic is directed only to healthy instance.
 Use to load balance across the different Available Zone (AZ) with in same region, but not to different VPC (or) Regions.
-Types
--> Application Load Balancer
--> Network Load Balancer
--> Gateway Load Balancer
--> Classic Load Balancer
+Types :-
+● Application Load Balancer (ALB)
+It is a Layer 7, operates at the application layer.
+It supports HTTP, HTTPS ports.
+It supports content-based routing, host-based routing.
+● Network Load Balancer (NLB)
+It is a Layer 4, operates at the transport layer.
+It supports TCP traffic.
+● Classic Load Balancer
+It is a combine feature of Layer 4 and 7, both NLB and ALB.
+It supports HTTP, HTTPS ports and TCP traffic.
+● Gateway Load Balancer
 
 USER's ---> EC2                          # All the incoming traffic into one server.
    
