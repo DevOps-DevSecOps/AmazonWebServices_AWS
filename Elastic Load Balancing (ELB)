@@ -17,10 +17,10 @@ It supports content-based routing, host-based routing.
 ● Network Load Balancer (NLB)
 It is a Layer 4, operates at the transport layer.
 It supports TCP traffic.
-● Classic Load Balancer
+● Classic Load Balancer (CLB)
 It is a combine feature of Layer 4 and 7, both NLB and ALB.
 It supports HTTP, HTTPS ports and TCP traffic.
-● Gateway Load Balancer
+● Gateway Load Balancer (GWLB)
 
 USER's ---> EC2                          # All the incoming traffic into one server.
    
