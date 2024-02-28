@@ -1,6 +1,6 @@
 [EC2 (Elastic Compute Cloud)]
 ● Instances
-The initially limited to launching 20 EC2 Instances per VPC.
+The initially limited to launching 20 EC2 Instances per Region.
 Instance Types :-
 --------------
 General Purpose - instances provide a balance of compute, memory and networking resources, and can be used for a variety of diverse workloads.
